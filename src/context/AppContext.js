@@ -3,6 +3,7 @@ import React, { createContext, useReducer } from 'react';
 // 5. The reducer - this is used to update the state, based on the action
 export const AppReducer = (state, action) => {
     let budget = 0;
+    
     switch (action.type) {
         case 'ADD_EXPENSE':
             let total_budget = 0;
@@ -86,7 +87,7 @@ const initialState = {
         { id: "Human Resource", name: 'Human Resource', cost: 40 },
         { id: "IT", name: 'IT', cost: 500 },
     ],
-    currency: '£'
+    currency: '$'
 };
 
 // 2. Creates the context this is the thing our components import and use to get the state
