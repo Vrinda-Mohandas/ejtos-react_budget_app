@@ -1,0 +1,9 @@
+.my-select {
+    background-color: blueviolet;
+    color: black;
+}
+
+.my-select option:hover {
+    background-color: brown;
+    color: white;
+}
