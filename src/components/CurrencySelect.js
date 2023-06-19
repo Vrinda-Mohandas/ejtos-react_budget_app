@@ -5,10 +5,10 @@ import Select from 'react-select'
 const CurrencySelect = () => {
     const { currency, dispatch } = useContext(AppContext);
     const ddOptions = [
-        { key: "dollar", value: "$", label: "$ Dollar", style: { backgroundColor: 'yellow' } },
-        { key: "pound", value: "£", label: "£ Pound", style: { backgroundColor: 'yellow' } },
-        { key: "euro", value: "€", label: "€ Euro", style: { backgroundColor: 'yellow' } },
-        { key: "rupee", value: "₹", label: "₹ Ruppee", style: { backgroundColor: 'yellow' } }
+        { key: "dollar", value: "$", label: "$ Dollar" },
+        { key: "pound", value: "£", label: "£ Pound" },
+        { key: "euro", value: "€", label: "€ Euro" },
+        { key: "rupee", value: "₹", label: "₹ Ruppee" }
     ];
 
     const getDefaultVal = (value) => {
@@ -22,12 +22,10 @@ const CurrencySelect = () => {
         // The label shown on the Select has to be different from the list
         selOption.label = `Currency(${selOption.label})`;
         setCurrencySign(selOption);
-        if (selOption.value !== 'Choose...') {
-            dispatch({
-                type: 'CHG_CURRENCY',
-                payload: selOption.value,
-            });
-        }
+        dispatch({
+            type: 'CHG_CURRENCY',
+            payload: selOption.value,
+        });
     }
 
     const customStyles = {
